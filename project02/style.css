@@ -1,13 +1,13 @@
 @font-face {
-    font-family: Poppins;
-    src: url(./Poppins-Regular.ttf);
+    font-family: Sabaling;
+    src: url(./Sabaling-6Rv2v.otf);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: Sabaling;
     color: whitesmoke;
 }
 html,body{
@@ -35,7 +35,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(215, 215, 215)
+    color: rgb(215, 215, 215);
 }
 
 #input-container{
@@ -47,7 +47,7 @@ h1{
 }
 input{
     font-size: 1.2rem;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -60,7 +60,7 @@ input{
 }
 .add{
     font-size: 1.2rem;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -103,7 +103,7 @@ input{
 
 }
 .todo .left h2{
-    font-weight: 400;
+    font-weight: 100;
     font-size: 18px;
 
 }
