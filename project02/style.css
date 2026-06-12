@@ -112,27 +112,25 @@ input{
 
 }
 .todo .right button{
-    padding: 0.3rem 0.5rem;
     border: none;
     border-radius: 5px;
     height: fit-content;
     background-color: transparent;
 }
-.todo .right .edit{
-    color: rgb(196, 144, 0);
-    border: 1px solid rgb(196, 144, 0);
-    font-weight: 700;
-    border-radius: 50%;
-}
+
 .todo .right .edit i{
-    color: rgb(196, 144, 0);
-}
-.todo .right .del{
-    color: rgb(180, 0, 0);
-    border: 1px solid rgb(180, 0, 0);
+    padding: 0.3rem;
     border-radius: 50%;
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border: 2px solid rgb(196, 144, 0);
+    color: rgb(196, 144, 0);
 }
 .todo .right .del i{
+    font-weight: 900;
+    padding: 0.3rem;
+    border: 2px solid rgb(180, 0, 0);
+    border-radius: 50%;
+    font-size: 1.1rem;
     color: rgb(180, 0, 0);
 }
