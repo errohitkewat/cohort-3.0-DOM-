@@ -11,7 +11,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    background-color: lightcyan;
+    background-color: rgb(87, 121, 222);
     color: rgb(0, 0, 0);
 }
 
@@ -19,14 +19,16 @@ html,body{
 main{
     min-height: 100%;
     width: 100%;
-    background-color: lightcyan;
+    background-color: rgb(87, 121, 222);
     padding: 3vh 5vw;
     display: flex;
     flex-direction: column;
     gap: 3vh;
 }
 
-
+h1{
+    font-size: 2.5rem;
+}
 
 form{
     display: flex;
@@ -34,8 +36,9 @@ form{
     min-height: 40vh;
     width: 100%;
     padding: 5vh;
-    box-shadow: 0 5px 5px rgb(200, 200, 200);
+    /* box-shadow: 0 5px 5px rgb(51, 93, 221); */
     gap: 1rem;
+    border-radius: 1rem;
 }
 form .name-con{
     display: flex;
@@ -52,29 +55,43 @@ form .url-con{
     flex-direction: column;
     gap: 0.3rem;
 }
+form label{
+    font-weight: 900;
+}
 form input{
     width: 40vw;
     flex-shrink: 0;
     font-size: 1.1rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.5rem;
     outline: none;
-    border: 1px solid gray;
+    font-weight: 900;
+    border: none;
     border-radius: 0.5rem;
     background-color: transparent;
+    box-shadow: 0 0  2px rgb(0, 46, 186);
+    transition: all ease 0.3s;
+}
+form input:focus{
+    background-color: royalblue;
+}
+form input:hover{
+    background-color: royalblue;
 }
 form button{
     width: 40vw;
     font-size: 1.1rem;
-    padding: 0.3rem ;
+    font-weight: 900;
+    padding: 0.4rem ;
     outline: none;
-    border: 1px solid gray;
+    border: none;
+    box-shadow: 0 0  3px rgb(0, 46, 186);
     border-radius: 0.5rem;
     background-color: transparent;
     margin-top: 1rem;
-    transition: all ease 0.2s;
+    transition: all ease 0.3s;
 }
-form button:active{
-    scale: 0.9;
+form button:hover{
+    background-color: royalblue;
 }
 
 
@@ -83,21 +100,29 @@ form button:active{
     min-height: 50vh;
     width: 100%;
     padding: 5vh;
-    box-shadow: 0 5px 5px rgb(200, 200, 200);
+    /* box-shadow: 0 5px 5px rgb(51, 93, 221); */
     gap: 6vh;
     flex-wrap: wrap;
+    border-radius: 1rem;
 }
 .userCard{
-    min-height: 45vh;
+    overflow: hidden;
+    height: 47vh;
     width: 33.4vh;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 5px rgb(200, 200, 200);
+    box-shadow: 0 5px 5px rgb(51, 93, 221);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+}
+.userCard:hover{
+    transform: translateY(-15px);
 }
 .userCard .profile{
     height: 70%;
     width: 100%;
+    overflow: hidden;
 
 }
 .userCard .profile img{
@@ -115,7 +140,8 @@ form button:active{
 }
 .userCard .details h2{
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 900;
 }
 .userCard .details p{
     font-weight: 400;
@@ -143,4 +169,31 @@ form button:active{
     border: 1px solid black;
     color: white;
     border-radius: 0.3rem;
+}
+
+
+
+@media (max-width: 400px) {
+    main{
+        padding: 1rem 0.5rem;
+    }
+    form{
+        padding: 2rem 1rem;
+    }
+    .users-container{
+        padding: 2rem 1rem;
+        padding-bottom: 4rem;
+    }
+    form input {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .userCard {
+        width: 100%;
+        height: 60vh;
+    }
 }
