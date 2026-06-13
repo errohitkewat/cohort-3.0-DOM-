@@ -92,7 +92,7 @@ let users = [
         id: 3,
         name: "Anshika Maurya",
         email: "anshika@gmail.com",
-        image: "https://images.unsplash.com/photo-1570731102433-34470efb6acf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdpcmwlMjBpYW1nZXxlbnwwfDJ8MHx8fDA%3D",
+        image: "./anshika1.png",
     },
     {
         id: 4,
