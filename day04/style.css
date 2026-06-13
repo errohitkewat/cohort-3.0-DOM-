@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: lightcyan;
+    color: rgb(0, 0, 0);
+}
+
+
+main{
+    min-height: 100%;
+    width: 100%;
+    background-color: lightcyan;
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    width: 100%;
+    padding: 5vh;
+    box-shadow: 0 5px 5px rgb(200, 200, 200);
+    gap: 1rem;
+}
+form .name-con{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+form .email-con{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+form .url-con{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+form input{
+    width: 40vw;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    background-color: transparent;
+}
+form button{
+    width: 40vw;
+    font-size: 1.1rem;
+    padding: 0.3rem ;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    margin-top: 1rem;
+    transition: all ease 0.2s;
+}
+form button:active{
+    scale: 0.9;
+}
+
+
+.users-container{
+    display: flex;
+    min-height: 50vh;
+    width: 100%;
+    padding: 5vh;
+    box-shadow: 0 5px 5px rgb(200, 200, 200);
+    gap: 6vh;
+    flex-wrap: wrap;
+}
+.userCard{
+    min-height: 45vh;
+    width: 33.4vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px rgb(200, 200, 200);
+}
+.userCard .profile{
+    height: 70%;
+    width: 100%;
+
+}
+.userCard .profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.userCard .details {
+    height: 30%;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.userCard .details h2{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.userCard .details p{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.userCard .details .actions{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.userCard .details .actions button{
+    padding: 0.1rem 0.3rem;
+    font-size: 11px;
+    font-weight: 500;outline: none;
+    border: none;
+}
+.userCard .details .actions #edit{
+    background-color: rgb(255, 200, 0);
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+.userCard .details .actions #del{
+    background-color: rgb(214, 0, 0);
+    border: 1px solid black;
+    color: white;
+    border-radius: 0.3rem;
+}
