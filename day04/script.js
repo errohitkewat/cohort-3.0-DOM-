@@ -4,6 +4,7 @@ let nameInput = document.querySelector("#name")
 let emailInput = document.querySelector("#email")
 let urlInput = document.querySelector("#url");
 let usersContainer = document.querySelector(".users-container");
+let submit = document.querySelector("#submit");
 
 
 let users = [
@@ -84,6 +85,7 @@ form.addEventListener("submit", (events) => {
 
     form.reset();
     editingIndex = null;
+    submit.innerHTML = "Submit";
 });
 
 
@@ -97,6 +99,7 @@ let deleteUser = (index) => {
 
 //// Edit User functionality 
 let editUser = (index) => {
+    submit.innerHTML = "Update";
     let currentUser = users[index];
 
     nameInput.value = currentUser.name;
