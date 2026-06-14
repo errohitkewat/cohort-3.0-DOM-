@@ -1,72 +1,3 @@
-// Events => there are multiple types of events 
-    // Mouse Events => dblclick
-    // Pointer Events => click
-    // keyboard Events => keypress
-    // Input Events =>
-    // Submit Events =>
-
-
-// const btn = document.querySelector("button")
-// btn.addEventListener("dblclick", (events) => { 
-//     console.log(events);
-// })
-
-
-// window.addEventListener("keypress", (event) => { 
-//     console.log(event);
-// })
-
-
-// btn.addEventListener("mouseover", (events) => { 
-//     console.log(events);
-// })
-
-
-
-
-// Event Propogation ~~ Eevent Traversal => event propagation and traversing means a event moves from top to bottom and bottom to top both are happend simulataneusly but by default we only got event bubbling because event capturing has by default false for capturing we have to make it true ' 
-    // event capturing
-    // event bubbling
-
-
-// let body = document.body;
-// let div = document.querySelector("div");
-// let button = document.querySelector("button");
-
-// // event capturing 
-// button.addEventListener("click", (event) => { 
-//     console.log("button triggered")
-// })
-
-// div.addEventListener("click", (event) => { 
-//     console.log("div triggered")
-// })
-
-// body.addEventListener("click", (event) => { 
-//     console.log("body triggered")
-// })
-
-
-// // event bubbling 
-// button.addEventListener("click", (event) => { 
-//     console.log("button triggered")
-// }, {capturing: true})
-
-// div.addEventListener("click", (event) => { 
-//     console.log("div triggered")
-// }, {capturing: true})
-
-// body.addEventListener("click", (event) => { 
-//     console.log("body triggered")
-// }, { capturing: true })
-
-
-
-
-
-
-
-
 
 let form = document.querySelector("form")
 let nameInput = document.querySelector("#name")
@@ -103,45 +34,76 @@ let users = [
 ]
 
 
-let rendreUser = (user) => {
-    usersContainer.innerHTML += `<div class="userCard">
-                <div class="profile">
-                    <img src="${user.image}" alt="">
-                </div>
-                <div class="details">
-                    <h2>${user.name} </h2>
-                    <p>${user.email} </p>
-                    <p> --/--/---- </p>
-                    <div class="actions">
-                        <button id="edit">Edit</button>
-                        <button onClick = () id="del">Delete</button>
-                    </div>
-                </div>
-            </div>`
-}
+let renderUsers = () => {
+    usersContainer.innerHTML = "";
+  
+    users.forEach((user, index) => {
+      usersContainer.innerHTML += `<div class="userCard">
+                  <div class="profile">
+                      <img src="${user.image}" alt="">
+                  </div>
+                  <div class="details">
+                      <h2>${user.name} </h2>
+                      <p>${user.email} </p>
+                      <p> --/--/---- </p>
+                      <div class="actions">
+                          <button onclick = "editUser(${index})" id="edit">Edit</button>
+                          <button onclick = "deleteUser(${index})" id="del">Delete</button>
+                      </div>
+                  </div>
+              </div>`;
+    });
+};
+renderUsers();
 
-users.forEach(user => rendreUser(user));
 
-
-
-
+let editingIndex = null;
+ 
 form.addEventListener("submit", (events) => {
     events.preventDefault();
 
-    if (nameInput.value.trim() === "" && emailInput.value.trim() && imageInput.value.trim() === "", urlInput.value.trim() === "") return;
+    if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || urlInput.value.trim() === "") return;
 
-    let newUser = {
-        id: users.length + 1,
-        name: nameInput.value,
-        email: emailInput.value,
-        image: urlInput.value
+
+    if (editingIndex !== null) {
+        users[editingIndex].name = nameInput.value;
+        users[editingIndex].email = emailInput.value;
+        users[editingIndex].image = urlInput.value;
+    }
+    else {
+        let newUser = {
+            id: users.length + 1,
+            name: nameInput.value,
+            email: emailInput.value,
+            image: urlInput.value,
+        };
+        users.push(newUser);
     }
 
-    users.push(newUser);
-
-    rendreUser(newUser)
+    renderUsers();
 
     form.reset();
+    editingIndex = null;
 });
+
+
+
+//// Delete User functionality 
+let deleteUser = (index) => { 
+    users.splice(index, 1);
+    renderUsers();
+}
+
+
+//// Edit User functionality 
+let editUser = (index) => {
+    let currentUser = users[index];
+
+    nameInput.value = currentUser.name;
+    emailInput.value = currentUser.email;
+    urlInput.value = currentUser.image;
+
+    editingIndex = index;
+}
 
 

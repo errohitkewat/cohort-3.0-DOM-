@@ -11,7 +11,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    background-color: rgb(87, 121, 222);
+    background-color: rgb(99, 134, 241);
     color: rgb(0, 0, 0);
 }
 
@@ -19,7 +19,7 @@ html,body{
 main{
     min-height: 100%;
     width: 100%;
-    background-color: rgb(87, 121, 222);
+    background-color: rgb(99, 134, 241);
     padding: 3vh 5vw;
     display: flex;
     flex-direction: column;
@@ -72,10 +72,10 @@ form input{
     transition: all ease 0.3s;
 }
 form input:focus{
-    background-color: royalblue;
+    background-color: rgb(79, 123, 255);
 }
 form input:hover{
-    background-color: royalblue;
+    background-color: rgb(79, 123, 255);
 }
 form button{
     width: 40vw;
@@ -91,7 +91,7 @@ form button{
     transition: all ease 0.3s;
 }
 form button:hover{
-    background-color: royalblue;
+    background-color: rgb(79, 123, 255);
 }
 
 
@@ -155,7 +155,7 @@ form button:hover{
 
 .userCard .details .actions button{
     padding: 0.1rem 0.3rem;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;outline: none;
     border: none;
 }
@@ -170,6 +170,7 @@ form button:hover{
     color: white;
     border-radius: 0.3rem;
 }
+
 
 
 
