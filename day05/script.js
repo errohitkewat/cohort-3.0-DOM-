@@ -56,7 +56,7 @@ startbtn.addEventListener("click", (e) => {
         setTimeout(() => {
             gameOver.style.display = "flex";
         }, 1000);
-    },5000)
+    },10000)
 
 })
 
