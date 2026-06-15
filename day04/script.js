@@ -9,25 +9,21 @@ let submit = document.querySelector("#submit");
 
 let users = [
     {
-        id: 1,
         name: "Rohit Kewat",
         email: "rohit@gmail.com",
         image: "https://images.unsplash.com/photo-1656147344312-b84c14b00e6c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWVucyUyMGltYWdlfGVufDB8MnwwfHx8MA%3D%3D",
     },
     {
-        id: 2,
         name: "Aman Singh",
         email: "aman@gmail.com",
         image: "https://images.unsplash.com/photo-1693287728941-2e0125a67f90?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGltYWdlfGVufDB8MnwwfHx8MA%3D%3D",
     },
     {
-        id: 3,
         name: "Anshika Maurya",
         email: "anshika@gmail.com",
         image: "./anshika1.png",
     },
     {
-        id: 4,
         name: "Adarsh Verma",
         email: "adarsh@gmail.com",
         image: "https://images.unsplash.com/photo-1678650625611-a3ecb4aeab79?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbnMlMjBpbWFnZXxlbnwwfDJ8MHx8fDA%3D",
@@ -37,7 +33,7 @@ let users = [
 
 let renderUsers = () => {
     usersContainer.innerHTML = "";
-  
+
     users.forEach((user, index) => {
       usersContainer.innerHTML += `<div class="userCard">
                   <div class="profile">
@@ -59,7 +55,7 @@ renderUsers();
 
 
 let editingIndex = null;
- 
+
 form.addEventListener("submit", (events) => {
     events.preventDefault();
 
@@ -108,5 +104,6 @@ let editUser = (index) => {
 
     editingIndex = index;
 }
+
 
 
