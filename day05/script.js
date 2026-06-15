@@ -75,3 +75,5 @@ reStartBtn.addEventListener("click", () => {
     scoree.textContent = "0";
     gameOver.style.display = "none";
 })
+
+

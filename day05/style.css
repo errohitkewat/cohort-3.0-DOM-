@@ -90,8 +90,8 @@ main::before{
 }
 
 .angry-bird{
-    height:90px;
-    width:90px;
+    width: clamp(50px, 8vw, 90px);
+    height: clamp(50px, 8vw, 90px);
 
     position:absolute;
 
@@ -188,4 +188,154 @@ main::before{
     text-shadow:
     0 0 5px #fff,
     0 0 10cap #ff4ecd;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* *********** Responsive Part *********** */
+
+/* =========================
+   Tablets (1024px and below)
+========================= */
+
+@media (max-width:1024px){
+
+    .top{
+        width:90%;
+        font-size:1.1rem;
+    }
+
+    main{
+        width:90%;
+        height:65%;
+    }
+
+    .angry-bird{
+        width:80px;
+        height:80px;
+    }
+
+    .game-over h1{
+        font-size:4rem;
+    }
+}
+
+
+/* =========================
+   Large Phones
+========================= */
+
+@media (max-width:768px){
+
+    .top{
+        width:95%;
+        padding:1rem;
+        font-size:1rem;
+    }
+
+    main{
+        width:95%;
+        height:60%;
+        border-radius:20px;
+    }
+
+    .angry-bird{
+        width:70px;
+        height:70px;
+    }
+
+    .start,
+    .restart{
+        padding:.8rem 2rem;
+        font-size:1rem;
+    }
+
+    .game-over h1{
+        font-size:3rem;
+        text-align:center;
+        letter-spacing:2px;
+    }
+}
+
+
+/* =========================
+   Mobile Phones
+========================= */
+
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    .top{
+        width:100%;
+        padding:.9rem 1rem;
+        font-size:.95rem;
+        border-radius:15px;
+    }
+
+    main{
+        width:100%;
+        height:65vh;
+        border-radius:18px;
+    }
+
+    .angry-bird{
+        width:60px;
+        height:60px;
+    }
+
+    .start,
+    .restart{
+        width:100%;
+        max-width:250px;
+
+        padding:.9rem;
+
+        font-size:1rem;
+
+        border-radius:12px;
+    }
+
+    .game-over h1{
+        font-size:2.3rem;
+        letter-spacing:1px;
+        text-align:center;
+        padding:0 10px;
+    }
+}
+
+
+/* =========================
+   Very Small Devices
+========================= */
+
+@media (max-width:320px){
+
+    .top{
+        font-size:.85rem;
+    }
+
+    .angry-bird{
+        width:50px;
+        height:50px;
+    }
+
+    .game-over h1{
+        font-size:1.8rem;
+    }
+
+    .start,
+    .restart{
+        font-size:.9rem;
+    }
 }
