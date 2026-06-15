@@ -66,3 +66,12 @@ angryBird.addEventListener("click", () => {
     scoree.textContent = score;
 })
 
+
+reStartBtn.addEventListener("click", () => {
+    time = 0;
+    score = 0; 
+    main.removeChild(angryBird);
+    timer.textContent = "0";
+    scoree.textContent = "0";
+    gameOver.style.display = "none";
+})
