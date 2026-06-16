@@ -27,10 +27,13 @@ let interval;
 let time = 0;
 let score = 0;
 
+let isBirdClicked;
 
 
 let randomBird = () => {
     main.append(angryBird);
+
+    isBirdClicked = false;
 
     let mainH = main.clientHeight - angryBird.offsetHeight;
     let mainW = main.clientWidth - angryBird.offsetWidth;
@@ -61,8 +64,12 @@ startbtn.addEventListener("click", (e) => {
 })
 
 
-angryBird.addEventListener("click", () => { 
+angryBird.addEventListener("click", () => {
+    if (isBirdClicked) return;
+
     score += 1;
+
+    isBirdClicked = true;
     scoree.textContent = score;
 })
 
