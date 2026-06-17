@@ -102,6 +102,7 @@ main::before{
     filter .2s ease;
 }
 
+
 .angry-bird:hover{
     transform:scale(1.15);
     filter:

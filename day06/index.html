@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NEXUS</div>
+
+        <button class="create-btn">
+            Create Product
+        </button>
+    </nav>
+
+    <main>
+
+        <section class="form-container">
+            <div class="form-header">
+                <h2>Create Product</h2>
+                <p>Add a new item to your inventory</p>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Product Name">
+
+                <input type="number" placeholder="Price">
+
+                <input type="text" placeholder="Image URL">
+
+                <textarea placeholder="Product Description"></textarea>
+
+                <button type="submit">
+                    Add Product
+                </button>
+            </form>
+        </section>
+
+        <section class="products">
+            <!-- <div class="products-header">
+                <h1>Products Inventory </h1>
+            </div> -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="">
+                <div class="card-content">
+                    <h3>Premium Sneakers</h3>
+                    <p>Modern lifestyle sneakers designed for comfort.</p>
+                    <span>$129</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="">
+                <div class="card-content">
+                    <h3>Luxury Watch</h3>
+                    <p>Elegant design with timeless craftsmanship.</p>
+                    <span>$299</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800" alt="">
+                <div class="card-content">
+                    <h3>Wireless Headphones</h3>
+                    <p>Crystal clear sound with active noise cancelling.</p>
+                    <span>$199</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800" alt="">
+                <div class="card-content">
+                    <h3>Smart Backpack</h3>
+                    <p>Minimal design with modern functionality.</p>
+                    <span>$89</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

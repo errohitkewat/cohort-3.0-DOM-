@@ -20,7 +20,6 @@ let reStartBtn = document.querySelector(".restart")
 let angryBird = document.createElement("div")
 angryBird.classList.add("angry-bird");
 angryBird.innerHTML = `<img src="./angrybird.png" alt="Angry Bird Image"></img>`;
-    
 
 
 let interval;
@@ -82,5 +81,7 @@ reStartBtn.addEventListener("click", () => {
     scoree.textContent = "0";
     gameOver.style.display = "none";
 })
+
+
 
 

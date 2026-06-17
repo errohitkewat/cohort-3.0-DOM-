@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="overall-wrapper">
+        <nav>
+            <div class="logo">Manage Your Tasks</div>
+
+            <div class="theme">
+                <i id="light" class="ri-sun-line"></i>
+                <i id="dark" class="ri-moon-fill"></i>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <div class="analysis">
+                <div>
+                    <h2 class="total-tasks">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+                <div>
+                    <h2 class="pending-tasks">0</h2>
+                    <p>Pending Tasks</p>
+                </div>
+                <div>
+                    <h2 class="completed-tasks">0</h2>
+                    <p>Completed Tasks</p>
+                </div>
+            </div>
+
+            <section class="form-section">
+                <h2>Create Task</h2>
+                <form>
+                    <input type="text" placeholder="Enter task title..." id="taskTitle">
+                
+                    <select id="category">
+                        <option value="" disabled selected> Select Category</option>
+                        <option value="Work">Work</option>
+                        <option value="Study">Study</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Health"> Health</option>
+                    </select>
+                
+                    <button class="add-task" type="submit">Create Task</button>
+                </form>
+            </section>
+
+        
+
+
+            <section class="tasks-container">
+                <!-- <div class="task-card" data-id="${task.id}" data-status="${task.status}" data-category="${task.category}">
+                    <div class="task-info">
+                        <h3>Title</h3>
+                        <div class="span-container">
+                            <span class="category">Work</span>
+                            <span class="status pending">Pending</span>
+                            <span class="status completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="task-actions">
+                        <button onClick = "editTask()" class="edit-btn">Edit</button>
+                        <button class="complete-btn"> Complete </button>
+                        <button onClick = "deleteTask()" class="delete-btn">Delete</button>
+                    </div>
+                </div> -->
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
