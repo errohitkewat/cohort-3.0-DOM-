@@ -88,7 +88,6 @@ form.addEventListener("submit", (e) => {
 
     form.reset();
     isEditingTask = null;
-    totalTasks.textContent = tasks.length;
 })
  
 
@@ -133,15 +132,9 @@ let deleteTask = (index) => {
 // Updating the total tasks, pending tasks, and completed tasks after very operation 
 let updateAnalysis = () => {
     totalTasks.textContent = tasks.length;
-    let completed =
-        tasks.filter(
-            task => task.status === "completed"
-        ).length;
 
-    let pending =
-        tasks.filter(
-            task => task.status === "pending"
-        ).length;
+    let completed = tasks.filter( task => task.status === "completed" ).length;
+    let pending = tasks.filter( task => task.status === "pending" ).length;
 
     completedTask.textContent = completed;
     pendingTask.textContent = pending;
