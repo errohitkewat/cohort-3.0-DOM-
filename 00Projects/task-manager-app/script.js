@@ -88,12 +88,14 @@ form.addEventListener("submit", (e) => {
 
     form.reset();
     isEditingTask = null;
+    addTask.textContent = "Create Task"
 })
  
 
 
 // Edit button clicked the form iputs are filled with this code 
 let editTask = (index) => { 
+    addTask.textContent = "Update Task"
     isEditingTask = index;
 
     let task = tasks[isEditingTask];
