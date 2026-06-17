@@ -76,7 +76,59 @@
                 </div> -->
             </section>
         </main>
+
+
+
+
+        <section class="learning-section">
+        <div class="section-cards">
+            <h2>Event Propagation</h2>
+    
+            <div class="event-box grandparent">Grandparent
+                <div class="event-box parent">Parent
+                    <button class="child">Child Button</button>
+                </div>
+            </div>
+    
+            <div class="event-info">
+                <div>
+                    <h4>Event Bubbling</h4>
+                    <p>Child → Parent → Grandparent</p>
+                </div>
+                <div>
+                    <h4>Event Capturing</h4>
+                    <p>Grandparent → Parent → Child</p>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="section-cards">
+            <h2>Browser Rendering Pipeline</h2>
+    
+            <div class="pipeline">
+                <div class="box">HTML</div>
+                <div class="arrow">↓</div>
+    
+                <div class="box">Parsing</div>
+                <div class="arrow">↓</div>
+    
+                <div class="box">Tokenization</div>
+                <div class="arrow">↓</div>
+    
+                <div class="box">DOM Tree</div>
+                <div class="arrow">↓</div>
+    
+                <div class="box">CSSOM Tree</div>
+                <div class="arrow">↓</div>
+    
+                <div class="box">Render Tree</div>
+            </div>
+        </div>
+    </section>
     </div>
+
+
 
     <script src="script.js"></script>
 </body>

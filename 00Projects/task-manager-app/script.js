@@ -1,6 +1,4 @@
 let body = document.body
-let main = document.querySelector("main")
-let nav = document.querySelector("nav")
 let analysis = document.querySelector(".analysis")
 let formSection = document.querySelector(".form-section")
 let form = document.querySelector("form")
@@ -21,7 +19,6 @@ let completedTasks = 0;
 let pendingTasks = 0;
 
 
-
 let tasks = [];
 
 let isEditingTask = null;
@@ -30,7 +27,7 @@ let isEditingTask = null;
 
 
 
-
+// This is the function in which  the cod of task card is available this function created a task card inside tasks container using innerHtml and pasing the dynamic data through the tasks array after every task render the updateAnalysis function is calling beacause updateAnalysis() updates the total, pending and completed tasks 
 let renderTask = () => {
     tasksContainer.innerHTML = "";
 
@@ -60,6 +57,10 @@ let renderTask = () => {
 
 
 
+
+
+
+// This code is submitting  form and creating a task object that contains id(date.now()), title, category and status pushes to the tasks array and then calling the render function after rendering the form is reset 
 form.addEventListener("submit", (e) => { 
     e.preventDefault();
 
@@ -92,7 +93,7 @@ form.addEventListener("submit", (e) => {
  
 
 
-
+// Edit button clicked the form iputs are filled with this code 
 let editTask = (index) => { 
     isEditingTask = index;
 
@@ -100,11 +101,11 @@ let editTask = (index) => {
 
     taskTitle.value = task.title;
     categoryInput.value = task.category;
-
 }
 
 
 
+// Complete button Functionallity 
 tasksContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("complete-btn")) {
         let card = e.target.closest(".task-card");
@@ -114,6 +115,7 @@ tasksContainer.addEventListener("click", (e) => {
         renderTask();
     }
 })
+
 
 
 
@@ -128,7 +130,7 @@ let deleteTask = (index) => {
 
 
 
-
+// Updating the total tasks, pending tasks, and completed tasks after very operation 
 let updateAnalysis = () => {
     totalTasks.textContent = tasks.length;
     let completed =
@@ -149,14 +151,7 @@ let updateAnalysis = () => {
 
 
 
-
-
-
-
-
-
-
-
+// Light and dark theme toggel functionality 
 lightTheme.addEventListener("click", () => {
     body.classList.add("dark");
 
