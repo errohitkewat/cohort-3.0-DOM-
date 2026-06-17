@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Fahkwang";
+    src: url(./Fahkwang-Regular.ttf);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Fahkwang;
+    font-family: "Fahkwang";
 }
 
 body{
