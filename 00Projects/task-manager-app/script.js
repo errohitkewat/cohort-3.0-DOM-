@@ -67,10 +67,10 @@ form.addEventListener("submit", (e) => {
 
     if (isEditingTask !== null) {
         tasks[isEditingTask] = {
-            id,
+            id: tasks[isEditingTask].id,
             title: taskTitle.value,
             category: categoryInput.value,
-            status,
+            status: tasks[isEditingTask].status
         }
     }
     else {
