@@ -9,8 +9,8 @@ Parsing is the process where the browser reads HTML, CSS, and JavaScript code an
   Elements are converted into DOM nodes.
   CSS is parsed separately to create the CSSOM.
   Both are used for rendering the webpage.
-  Example
-
+  
+  * Example:
   <h1>Hello World</h1>
   <p>Welcome to my website</p>
   
@@ -19,8 +19,7 @@ Parsing is the process where the browser reads HTML, CSS, and JavaScript code an
 # 2. Tokenization
 Tokenization is the process of breaking source code into small meaningful pieces called tokens.
 
-Example
-
+* Example: 
 <h1>Hello</h1>
 
 Tokens:
@@ -41,7 +40,7 @@ Why Tokenization is Important?
 
 DOM Tree is a tree-like representation of the HTML document.
 
-Example HTML
+* Example HTML :
 <html>
   <body>
     <h1>Hello</h1>
