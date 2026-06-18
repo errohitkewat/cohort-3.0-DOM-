@@ -111,6 +111,7 @@ tasksContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("complete-btn")) {
         let card = e.target.closest(".task-card");
         let id = card.dataset.id;
+        
         let task = tasks.find(task => task.id == id);  
         task.status = "completed";
         renderTask();
@@ -135,7 +136,7 @@ let deleteTask = (index) => {
 let updateAnalysis = () => {
     totalTasks.textContent = tasks.length;
 
-    let completed = tasks.filter( task => task.status === "completed" ).length;
+    let completed = tasks.filter(task => task.status === "completed").length;
     let pending = tasks.filter( task => task.status === "pending" ).length;
 
     completedTask.textContent = completed;
