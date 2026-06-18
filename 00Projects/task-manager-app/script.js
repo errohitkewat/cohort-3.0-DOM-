@@ -15,6 +15,7 @@ let deleteBtn = document.querySelector(".delete-btn");
 let completedTask = document.querySelector(".completed-tasks");
 let pendingTask = document.querySelector(".pending-tasks")
 
+
 let completedTasks = 0;
 let pendingTasks = 0;
 
@@ -163,3 +164,45 @@ darkTheme.addEventListener("click", () => {
     lightTheme.style.display = "block";
 });
 
+
+
+
+/////////// Event Propogation ////////////////
+let grandParent = document.querySelector(".grandparent");
+let parent = document.querySelector(".parent");
+let child = document.querySelector(".child");
+
+let switchEvent = document.querySelector(".switch");
+let outputCard = document.querySelector(".outputCard");
+
+let isBubbling = true;
+
+// Switch Button Click Functionality 
+switchEvent.addEventListener("click", () => {
+    isBubbling = !isBubbling;
+
+    if (isBubbling) {
+        switchEvent.textContent = "Switch to Capturing";
+    } else {
+        switchEvent.textContent = "Switch to Bubbling";
+    }
+
+});
+
+
+// Child Button Click Functionality
+child.addEventListener("click", () => {
+    outputCard.innerHTML = "";
+
+    let orderOfElements;
+
+    if (isBubbling) {
+        orderOfElements = ["Child", "Parent", "Grand Parent"];
+    } else {
+        orderOfElements = ["Grand Parent", "Parent", "Child"];
+    }
+
+    orderOfElements.forEach(text => {
+        outputCard.innerHTML += `<p>${text}</p>`;
+    });
+});

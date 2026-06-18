@@ -371,6 +371,9 @@ form button:hover{
 .dark .learning-section h2{
     color: black;
 }
+.dark .outputCard p{
+    color: black;
+}
 
 /* ************************************** */
 
@@ -431,6 +434,44 @@ form button:hover{
     background: #111;
     color: white;
     cursor: pointer;
+}
+.output{
+    min-height: 100px;
+    background-color: rgb(234, 234, 234);
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 1px solid #9d9d9d;
+    padding: 20px 15px ;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.output h2{
+    margin-bottom: 0;
+}
+.head{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.head button{
+    padding: 0.4rem 0.7rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.outputCard {
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+.outputCard p{
+    margin-bottom: 0;
+    font-size: 1rem;
 }
 
 .event-info{
